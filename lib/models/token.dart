@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'token.g.dart';
+part 'token_generated.dart';
 
 @JsonSerializable()
 class Token {
@@ -22,4 +22,5 @@ class Token {
 
   Token(this.accessToken, this.tokenType, this.bearer, this.expiresIn,
       this.refreshToken, this.scope);
+
 }
