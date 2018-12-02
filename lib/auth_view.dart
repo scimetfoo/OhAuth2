@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:oh_auth_2/access_token_response_listener.dart';
 import 'package:oh_auth_2/access_token_service.dart';
 import 'package:oh_auth_2/models/token.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class AuthView extends StatefulWidget {
   final String redirectUri;
@@ -13,10 +13,10 @@ class AuthView extends StatefulWidget {
   final String accessTokenUrl;
   final String clientSecret;
   final AccessTokenService accessTokenService;
+  final String userAgent;
 
   const AuthView(this.accessTokenService, this.redirectUri, this.authUrl,
-      this.accessTokenUrl, this.clientId,
-      this.clientSecret);
+      this.accessTokenUrl, this.clientId, this.userAgent, this.clientSecret);
 
   @override
   createState() {
@@ -64,6 +64,7 @@ class AuthViewState extends State<AuthView>
                 widget.accessTokenUrl,
                 widget.clientId,
                 this,
+                widget.userAgent,
                 widget.clientSecret);
           }
         });

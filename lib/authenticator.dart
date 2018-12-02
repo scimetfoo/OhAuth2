@@ -27,12 +27,12 @@ class Authenticator {
   ///
   Future<Token> getAccessToken(String redirectUri, String authUrl,
       String accessTokenUrl, String clientId,
-      [String clientSecret]) async {
+      [String userAgent, String clientSecret]) async {
     final Token tokenResult = await Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => AuthView(accessTokenService, redirectUri, authUrl,
-            accessTokenUrl, clientId, clientSecret),
+            accessTokenUrl, clientId, userAgent, clientSecret),
       ),
     );
 
@@ -58,9 +58,9 @@ class Authenticator {
 
   Future<Token> refreshAccessToken(
       String refreshTokenUrl, String refreshToken, String clientId,
-      [String clientSecret]) async {
+      [String userAgent, String clientSecret]) async {
     Response refreshTokenResponse = await accessTokenService.refreshToken(
-        refreshToken, refreshTokenUrl, clientId, clientSecret);
+        refreshToken, refreshTokenUrl, clientId, userAgent, clientSecret);
     debugPrint("Response status: ${refreshTokenResponse.statusCode}");
     debugPrint("Refresh token response body: ${refreshTokenResponse.body}");
     if (refreshTokenResponse.statusCode >= 200 &&
@@ -85,9 +85,9 @@ class Authenticator {
 
   Future<bool> revokeAccessToken(
       String revokeTokenUrl, String token, String clientId,
-      [String clientSecret]) async {
+      [String userAgent, String clientSecret]) async {
     Response revokeTokenResponse = await accessTokenService.revokeAccessToken(
-        token, clientId, revokeTokenUrl, clientSecret);
+        token, clientId, revokeTokenUrl, userAgent, clientSecret);
     debugPrint("Response status: ${revokeTokenResponse.statusCode}");
     debugPrint("Response body: ${revokeTokenResponse.body}");
     return revokeTokenResponse.statusCode == 204

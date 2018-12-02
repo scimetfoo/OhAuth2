@@ -15,6 +15,7 @@ class ExampleView extends StatefulWidget {
 
 class ExampleViewState extends State<ExampleView> {
   Token token;
+  final String userAgent = "OhAuth2 example client";
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,6 @@ class ExampleViewState extends State<ExampleView> {
   }
 
   getNavigationDrawer(BuildContext context) {
-
     getLoginNavigationDrawerItem(var icon, String viewName, routeName) {
       return ListTile(
         leading: Icon(icon),
@@ -39,7 +39,7 @@ class ExampleViewState extends State<ExampleView> {
                     AuthenticationConfig.REDIRECT_URI,
                     AuthenticationConfig.AUTH_URL,
                     AuthenticationConfig.ACCESS_TOKEN_URL,
-                    AuthenticationConfig.CLIENT_ID)
+                    AuthenticationConfig.CLIENT_ID, userAgent)
                 .then((token) {
               this.token = token;
               debugPrint(token.toJson().toString());
@@ -58,7 +58,8 @@ class ExampleViewState extends State<ExampleView> {
               bool isRevoked = await Authenticator(context).revokeAccessToken(
                   AuthenticationConfig.REVOKE_TOKEN_URL,
                   token.refreshToken,
-                  AuthenticationConfig.CLIENT_ID);
+                  AuthenticationConfig.CLIENT_ID,
+                  userAgent);
               debugPrint("Revoked access token " + (isRevoked.toString()));
             });
           });
@@ -73,7 +74,8 @@ class ExampleViewState extends State<ExampleView> {
               Token token = await Authenticator(context).refreshAccessToken(
                   AuthenticationConfig.ACCESS_TOKEN_URL,
                   this.token.refreshToken,
-                  AuthenticationConfig.CLIENT_ID);
+                  AuthenticationConfig.CLIENT_ID,
+                  userAgent);
               this.token.accessToken = token.accessToken;
               debugPrint("Refreshed access token " + token.accessToken);
             });
