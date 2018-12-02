@@ -1,8 +1,45 @@
 # example
 
-A new Flutter application.
+(Assuming you already have your OAuth credentials)
 
-## Getting Started
+To retrieve the access token:
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+```dart
+import 'dart:async';
+import 'package:oh_auth_2/authenticator.dart';
+import 'package:oh_auth_2/models/token.dart';
+
+Future<Token> tokenResult = Authenticator(context)
+    .getAccessToken(
+        AuthenticationConfig.REDIRECT_URI,
+        AuthenticationConfig.AUTH_URL,
+        AuthenticationConfig.ACCESS_TOKEN_URL,
+        AuthenticationConfig.CLIENT_ID)
+    .then((token) {
+  this.token = token;
+  debugPrint(token.toJson().toString());
+});
+```
+To refresh the access token:
+
+```dart
+import 'dart:async';
+import 'package:oh_auth_2/authenticator.dart';
+import 'package:oh_auth_2/models/token.dart';
+
+Token token = await Authenticator(context).refreshAccessToken(
+    AuthenticationConfig.ACCESS_TOKEN_URL,
+    this.token.refreshToken,
+    AuthenticationConfig.CLIENT_ID);
+this.token.accessToken = token.accessToken;
+debugPrint("Refreshed access token " + token.accessToken);
+```
+To revoke the access/refresh token:
+
+```dart
+bool isRevoked = await Authenticator(context).revokeAccessToken(
+    AuthenticationConfig.REVOKE_TOKEN_URL,
+    token.refreshToken,
+    AuthenticationConfig.CLIENT_ID);
+debugPrint("Revoked access token " + (isRevoked.toString()));
+```
