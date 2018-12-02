@@ -15,7 +15,7 @@ Future<Token> tokenResult = Authenticator(context)
         AuthenticationConfig.AUTH_URL,
         AuthenticationConfig.ACCESS_TOKEN_URL,
         AuthenticationConfig.CLIENT_ID,
-        userAgent: userAgent, //optional
+        userAgent: AuthenticationConfig.USER_AGENT, //optional
         clientSecret: AuthenticationConfig.CLIENT_SECRET, //optional
 )
     .then((token) {
@@ -34,7 +34,7 @@ Token token = await Authenticator(context).refreshAccessToken(
     AuthenticationConfig.ACCESS_TOKEN_URL,
     this.token.refreshToken,
     AuthenticationConfig.CLIENT_ID,
-    userAgent: userAgent, //optional
+    userAgent: AuthenticationConfig.USER_AGENT, //optional
     clientSecret: AuthenticationConfig.CLIENT_SECRET, //optional
 );
 this.token.accessToken = token.accessToken;
@@ -51,7 +51,7 @@ bool isRevoked = await Authenticator(context).revokeAccessToken(
     AuthenticationConfig.REVOKE_TOKEN_URL,
     token.refreshToken,
     AuthenticationConfig.CLIENT_ID,
-    userAgent: userAgent, //optional
+    userAgent: AuthenticationConfig.USER_AGENT, //optional
     clientSecret: AuthenticationConfig.CLIENT_SECRET //optional
 );
 debugPrint("Revoked access token " + (isRevoked.toString()));
