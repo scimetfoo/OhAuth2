@@ -6,10 +6,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebde54a2-4c4c-456d-9286-e22fba8fd554" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/example_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/example_view.dart" afterDir="false" />
-    </list>
+    <list default="true" id="ebde54a2-4c4c-456d-9286-e22fba8fd554" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -26,8 +23,17 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="63" column="40" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -77,8 +83,8 @@
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/example/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/example/lib/example_view.dart" />
+        <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -331,11 +337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -397,10 +398,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="63" column="40" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="78" />
         </state>
       </provider>
     </entry>

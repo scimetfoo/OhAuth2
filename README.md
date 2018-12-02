@@ -1,11 +1,9 @@
 # OhAuth2
-
-OhAuth2: Flutter library for the industry-standard protocol for authorization.
 =================================
 
-OhAuth2 is a Dart package that makes working with OAuth 2.0 on flutter easier.
+OhAuth2 is a Flutter library for the industry-standard protocol for authorization.
 
-Disclaimer: This library has been tested with a few services like Reddit and Strava. If you find OhAuth2 to be incompatible with a service you're trying to use this library for, please open an Issue or create a PR
+Disclaimer: This library has been tested with a few services like Reddit and Strava. If you find OhAuth2 to be incompatible with a service you're trying to use this library with, please open an Issue or create a PR
 
 # Installation
 Installing OhAuth2 is simple using Dart's package management system, [pub](https://pub.dartlang.org). Instructions on how to import OAuth2 into your project can be found [here](https://pub.dartlang.org/packages/OhAuth2#-installing-tab-).
