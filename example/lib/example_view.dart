@@ -75,7 +75,7 @@ class ExampleViewState extends State<ExampleView> {
                   this.token.refreshToken,
                   AuthenticationConfig.CLIENT_ID);
               this.token.accessToken = token.accessToken;
-              debugPrint("Refreshed acccess token " + token.accessToken);
+              debugPrint("Refreshed access token " + token.accessToken);
             });
           });
     }
