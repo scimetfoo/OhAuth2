@@ -1,6 +1,6 @@
 name: oh_auth_2
 description: A flutter library for the industry-standard protocol for authorization.
-version: 1.0.0+1
+version: 1.0.1+1
 authors:
   - Murtaza Akbari <murtazasakbari@gmail.com>
 homepage: https://github.com/Murtaza0xFF/OhAuth2
