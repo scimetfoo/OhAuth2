@@ -36,10 +36,12 @@ class ExampleViewState extends State<ExampleView> {
           setState(() async {
             Future<Token> tokenResult = Authenticator(context)
                 .getAccessToken(
-                    AuthenticationConfig.REDIRECT_URI,
-                    AuthenticationConfig.AUTH_URL,
-                    AuthenticationConfig.ACCESS_TOKEN_URL,
-                    AuthenticationConfig.CLIENT_ID, userAgent)
+              AuthenticationConfig.REDIRECT_URI,
+              AuthenticationConfig.AUTH_URL,
+              AuthenticationConfig.ACCESS_TOKEN_URL,
+              AuthenticationConfig.CLIENT_ID,
+              userAgent: userAgent,
+            )
                 .then((token) {
               this.token = token;
               debugPrint(token.toJson().toString());
@@ -59,7 +61,7 @@ class ExampleViewState extends State<ExampleView> {
                   AuthenticationConfig.REVOKE_TOKEN_URL,
                   token.refreshToken,
                   AuthenticationConfig.CLIENT_ID,
-                  userAgent);
+                  userAgent: userAgent);
               debugPrint("Revoked access token " + (isRevoked.toString()));
             });
           });
@@ -72,10 +74,11 @@ class ExampleViewState extends State<ExampleView> {
           onTap: () {
             setState(() async {
               Token token = await Authenticator(context).refreshAccessToken(
-                  AuthenticationConfig.ACCESS_TOKEN_URL,
-                  this.token.refreshToken,
-                  AuthenticationConfig.CLIENT_ID,
-                  userAgent);
+                AuthenticationConfig.ACCESS_TOKEN_URL,
+                this.token.refreshToken,
+                AuthenticationConfig.CLIENT_ID,
+                userAgent: userAgent,
+              );
               this.token.accessToken = token.accessToken;
               debugPrint("Refreshed access token " + token.accessToken);
             });
