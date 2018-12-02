@@ -1,5 +1,4 @@
 # OhAuth2
-=================================
 
 OhAuth2 is a Flutter library for the industry-standard protocol for authorization.
 
