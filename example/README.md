@@ -1,4 +1,4 @@
-# example
+# Example
 
 (Assuming you already have your OAuth credentials)
 
