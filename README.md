@@ -66,6 +66,11 @@ bool isRevoked = await Authenticator(context).revokeAccessToken(
 debugPrint("Revoked access token " + (isRevoked.toString()));
 ```
 
+# Contact
+
+  * [Twitter](https://twitter.com/murtaza0xff)
+  * Email: murtazasakbari@gmail.com
+  
 # License
 
 OhAuth2 is provided under a [MIT License](https://github.com/Murtaza0xFF/OhAuth2/blob/master/LICENSE). Copyright (c) 2018 Murtaza Akbari.
