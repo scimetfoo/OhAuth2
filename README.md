@@ -1,6 +1,6 @@
 # OhAuth2
 
-OhAuth2 is a Flutter library for the industry-standard protocol for authorization.
+OhAuth2 is a Flutter library for OAuth2 - the industry-standard protocol for authorization.
 
 Disclaimer: This library has been tested with a few services like Reddit and Strava. If you find OhAuth2 to be incompatible with a service you're trying to use this library with, please open an Issue or create a PR
 
