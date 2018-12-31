@@ -68,7 +68,7 @@ debugPrint("Revoked access token " + (isRevoked.toString()));
 
 # Contact
 
-  * [Twitter](https://twitter.com/murtaza0xff)
+  * Twitter: https://twitter.com/murtaza0xff
   * Email: murtazasakbari@gmail.com
   
 # License
